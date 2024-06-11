@@ -1,0 +1,31 @@
+User Model
+    - name
+    - address
+    - emailId - validation added
+    - password
+
+    - GET, POST Done
+
+Product Model
+    - name
+    - category -> ProductCategory
+    - price
+    - discount
+
+    - GET, POST Done
+    - Filter Product by ProductCategory Names Done
+    - Display discountedPrice
+
+ProductCategory Model
+    - name
+
+    - GET, POST Done
+
+Order Model
+    - userId - User
+    - productId -> Product
+    - quantity
+
+Bill Model
+    - orderId -> Order
+    - createdAt
