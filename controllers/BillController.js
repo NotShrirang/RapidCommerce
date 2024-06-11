@@ -1,13 +1,25 @@
-const { sequelize, Bill } = require('../models');
+const { sequelize, Bill, Order } = require('../models');
 
 const getCustomersBills = async (req, res) => {
-    const userId = req.params.id;
-    const bills = await Bill.findAll({
-        where: {
-            userId: userId
-        }
-    });
-    return res.json({status: "success", data: bills});
+    try {
+        const body = req.body;
+        const userId = body.userId;
+        const orderId = body.orderId;
+        const orders = await Order.findAll({
+            where: {
+                id: orderId,
+                userId: userId
+            }
+        })
+        const bills = await Bill.findAll({
+            where: {
+                orderId: orders[0].id
+            }
+        });
+        return res.json({status: "success", data: bills});
+    } catch (err) {
+        return res.json({status: "failed", error: err})
+    }
 }
 
 const createNewBill = async (req, res) => {
