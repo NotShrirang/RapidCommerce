@@ -26,6 +26,12 @@ Order Model
     - productId -> Product
     - quantity
 
+    - GET, POST Done
+    - Filter Order by userId Names Done
+
 Bill Model
     - orderId -> Order
     - createdAt
+
+    - GET, POST Done
+    - Filter Product by orderId Names Done
