@@ -17,7 +17,7 @@ Welcome to **RapidCommerce Backend**, the fast and efficient backend for your e-
 
 1. Clone the repository:
 ```bash
-   [git clone https://github.com/yourusername/shopez-backend.git](https://github.com/NotShrirang/RapidCommerce.git)
+   git clone https://github.com/NotShrirang/RapidCommerce.git
    cd RapidCommerce
 ```
 
